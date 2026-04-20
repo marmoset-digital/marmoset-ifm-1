@@ -13,6 +13,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { processOrder } from "@/lib/orchestrator";
 import type { GravityFormsPayload } from "@/types";
 
+export const dynamic = "force-dynamic";
+
 const GF_WEBHOOK_SECRET = process.env.GF_WEBHOOK_SECRET;
 
 /**

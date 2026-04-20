@@ -11,6 +11,8 @@ import { supabase } from "@/lib/supabase";
 import { syncToServiceM8 } from "@/lib/services/servicem8";
 import { syncToXero } from "@/lib/services/xero";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(
   request: NextRequest,
   { params }: { params: { orderId: string } }
