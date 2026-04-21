@@ -13,7 +13,7 @@ import {
 import type { ParsedOrder } from "@/types";
 
 const SM8_BASE_URL = "https://api.servicem8.com/api_1.0";
-const SM8_ACCESS_TOKEN = process.env.SERVICEM8_ACCESS_TOKEN!;
+const SM8_API_KEY = process.env.SERVICEM8_API_KEY!;
 
 /**
  * Make an authenticated request to ServiceM8.
@@ -27,7 +27,7 @@ async function sm8Request(
     method,
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${SM8_ACCESS_TOKEN}`,
+      "X-API-Key": SM8_API_KEY,
     },
     body: body ? JSON.stringify(body) : undefined,
   });
